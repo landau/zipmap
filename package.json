@@ -1,0 +1,37 @@
+{
+  "name": "zipmap",
+  "version": "1.0.0",
+  "description": "Returns a map with the keys mapped to the corresponding vals.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R nyan test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/landau/zipmap.git"
+  },
+  "keywords": [
+    "functional",
+    "zip",
+    "map",
+    "hashmap",
+    "object",
+    "keys",
+    "values",
+    "vals",
+    "array",
+    "associate"
+  ],
+  "author": "Trevor Landau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/landau/zipmap/issues"
+  },
+  "homepage": "https://github.com/landau/zipmap",
+  "devDependencies": {
+    "is-predicate": "^0.4.0",
+    "jshint-stylish": "^0.1.5",
+    "mocha": "^1.18.2",
+    "jshint": "^2.4.4"
+  }
+}
