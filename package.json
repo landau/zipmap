@@ -4,6 +4,7 @@
   "description": "Returns a map with the keys mapped to the corresponding vals.",
   "main": "index.js",
   "scripts": {
+    "pretest": "jshint --reporter node_modules/jshint-stylish/stylish.js index.js test.js",
     "test": "mocha -R nyan test.js"
   },
   "repository": {
@@ -29,7 +30,6 @@
   },
   "homepage": "https://github.com/landau/zipmap",
   "devDependencies": {
-    "is-predicate": "^0.4.0",
     "jshint-stylish": "^0.1.5",
     "mocha": "^1.18.2",
     "jshint": "^2.4.4"
