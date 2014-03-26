@@ -23,7 +23,7 @@
     "array",
     "associate"
   ],
-  "author": "Trevor Landau",
+  "author": "Trevor Landau <landautrevor@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/landau/zipmap/issues"
