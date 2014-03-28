@@ -5,6 +5,18 @@ zipmap
 
 Returns a map with the keys mapped to the corresponding vals.
 
+```js
+/**
+ * Returns a map with the keys mapped to the corresponding vals.
+ *
+ * @param {array} keys
+ * @param {array} vals
+ *
+ * @return {object}
+ */
+function zipmap(keys, vals) { }
+```
+
 ## Install
 
 `npm i -S zipmap`
@@ -12,6 +24,9 @@ Returns a map with the keys mapped to the corresponding vals.
 ## Usage
 
 ```js
+var assert = require('assert');
+var zipmap = require('zipmap');
+
 var keys = ['a', 'b', 'c'];
 var vals = [1, 2, 3];
 
