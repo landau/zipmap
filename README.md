@@ -3,14 +3,16 @@
 zipmap
 ======
 
-Returns a map with the keys mapped to the corresponding vals.
+Returns a map with the keys mapped to the corresponding vals. `zipmap` also accepts a single value of objects or pairs.
+
+> Note: If you use objects, you must use the props `key` and `value`
 
 ```js
 /**
  * Returns a map with the keys mapped to the corresponding vals.
  *
  * @param {array} keys
- * @param {array} vals
+ * @param {array} [vals]
  *
  * @return {object}
  */
@@ -33,3 +35,43 @@ var vals = [1, 2, 3];
 var map = zipmap(keys, vals);
 assert.deepEqual(map, { a: 1, b: 2, c: 3 });
 ```
+
+Or use an array of objects
+
+```js
+var objs = [
+  { key: 'foo', value: 'bar' },
+  { key: 'hi', value: 'bye' },
+];
+
+var out = {
+  foo: ',
+  hi: 'bye'
+};
+
+var map = zipmap(objs);
+assert.deepEqual(map, out);
+```
+
+or use an array of pairs
+
+```js
+var pairs = [
+  ['foo', 'bar'],
+  ['hi', 'bye']
+];
+
+var out = {
+  foo: 'bar',
+  hi: 'bye'
+};
+
+var map = zipmap(pairs);
+assert.deepEqual(map, out);
+```
+
+## Changelog
+
+#### 1.0.2
+
+- Add single argument handling which allows objects or pairs
