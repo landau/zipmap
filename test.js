@@ -50,6 +50,10 @@ describe('zipmap', function() {
     assert.deepEqual(map, out);
   });
 
+  it('returns an empty object if empty array supplied', function() {
+    assert.deepEqual(zipmap([]), {});
+  });
+
   it('throws a TypeError if not pairs or objs and only supply 1 arg', function() {
     var err;
     try {
