@@ -1,9 +1,5 @@
 'use strict';
 
-function nth(arr, idx) {
-  return arr[idx];
-}
-
 var toString = Function.call.bind(Object.prototype.toString);
 
 function isObj(o) {
@@ -15,7 +11,7 @@ function _zipmap(keys, vals) {
   var shorter = keys.length > vals.length ? vals : keys;
 
   return shorter.reduce(function(map, val, idx) {
-    map[nth(keys, idx)] = nth(vals, idx);
+    map[keys[idx]] = vals[idx];
     return map;
   }, {});
 
@@ -23,7 +19,7 @@ function _zipmap(keys, vals) {
 
 function zipmapPairs(pairs) {
   return pairs.reduce(function(map, pair) {
-    map[nth(pair, 0)] = nth(pair, 1);
+    map[pair[0]] = pair[1];
     return map;
   }, {});
 }
@@ -45,8 +41,8 @@ function zipmapObj(objs) {
  */
 module.exports = function zipmap(keys, vals) {
   if (!vals) {
-    if (Array.isArray(nth(keys, 0))) return zipmapPairs(keys);
-    if (isObj(nth(keys, 0))) return zipmapObj(keys);
+    if (Array.isArray(keys[0])) return zipmapPairs(keys);
+    if (isObj(keys[0])) return zipmapObj(keys);
     throw new TypeError('Expected vals to be an array');
   }
 
