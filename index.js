@@ -41,6 +41,7 @@ function zipmapObj(objs) {
  */
 module.exports = function zipmap(keys, vals) {
   if (!vals) {
+    if (Array.isArray(keys) && !keys.length) return {};
     if (Array.isArray(keys[0])) return zipmapPairs(keys);
     if (isObj(keys[0])) return zipmapObj(keys);
     throw new TypeError('Expected vals to be an array');
