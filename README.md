@@ -72,6 +72,10 @@ assert.deepEqual(map, out);
 
 ## Changelog
 
-#### 1.0.2
+#### 1.1.1
+
+- Return empty obj when given an array of len 0
+
+#### 1.1.0
 
 - Add single argument handling which allows objects or pairs
