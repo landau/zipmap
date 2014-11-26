@@ -45,7 +45,7 @@ var objs = [
 ];
 
 var out = {
-  foo: ',
+  foo: 'bar',
   hi: 'bye'
 };
 
